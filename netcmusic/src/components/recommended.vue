@@ -13,12 +13,12 @@
                 <h6>那些触动人心的女生名谣</h6>
             </div>
             <div class="item">
-                <span>△563万</span>
+                <Amount></Amount>
                 <img src='../../public/laoge.jpg' alt="图像已损坏">
                 <h6>老歌越听越经典，旧人越看越无情</h6>
             </div>
             <div class="item">
-                <span>△563万</span>
+                <Amount></Amount>
                 <img src='../../public/dianyin.jpg' alt="图像已损坏">
                 <h6>[东方电音动] 璇跳律，参透神经</h6>
             </div>
@@ -28,12 +28,12 @@
                 <h6>软妹子 萝莉 暖音 软耳朵</h6>
             </div>
             <div class="item">
-                <span>△563万</span>
+                <Amount></Amount>
                 <img src='../../public/baidadj.jpg' alt="图像已损坏">
                 <h6>[全球百大DJ] 2018百大DJ精选作品</h6>
             </div>
             <div class="item">
-                <span>△563万</span>
+                <Amount></Amount>
                 <img src='../../public/qiubai.jpg' alt="图像已损坏">
                 <h6>[燃系ACG],吾驰骋于沙场，未曾经历一败</h6>
             </div>
@@ -42,8 +42,18 @@
     </div>
 </template>
 <script>
+// 引入消息
+import Amount  from "./Amount";
     export default {
+        data(){
+            return {
 
+            }
+        },
+        // <!-- 2注册 -->
+         components:{
+             "Amount":Amount
+         }
     }
 </script>
 <style>
@@ -79,13 +89,6 @@
         flex-direction: column;
         position: relative;
          min-height: 130px;
-    }
-    .recommended-content>.item>span{
-        font-size: 10px;
-        color: #fff;
-        position: absolute;
-        top:6px;
-        left:56px;
     }
     .item>img{
         width: 100%;

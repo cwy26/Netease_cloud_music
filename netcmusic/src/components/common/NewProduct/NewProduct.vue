@@ -1,25 +1,27 @@
 <template>
-    <div>
+    <div class="NewProduct-app">
         <div class="TopHeader">
             <div>
-            <mt-button @click="song" data-id="disc">新碟</mt-button>
-            <mt-button @click="song" data-id="playlist">新歌</mt-button>
+            <span @click="song" data-id="disc"  plain>新碟</span> |
+            <span @click="song" data-id="playlist" plain>新歌</span>
             </div>
             <song :MoreSong="RightSong"></song>
         </div>
         <mt-tab-container v-model="active">
             <mt-tab-container-item id="disc">
-                新碟
+               <DiscPanel></DiscPanel>
             </mt-tab-container-item>
             <mt-tab-container-item id="playlist">
-                新歌
+                <NewSongPanel></NewSongPanel>
             </mt-tab-container-item>
         </mt-tab-container>
     </div>
 </template>
 <script>
 // 引入子组件
-import song from "./song"
+import Song from "./Song"
+import DiscPanel from "./DiscPanel"
+import NewSongPanel from "./NewSongPanel"
     export default {
         data(){
             return{
@@ -30,17 +32,20 @@ import song from "./song"
         // 定义事件函数
         methods:{
             song(e){
-                // this.active= e.target.dataset.id;
-                // if(this.active="disc"){
-                //     RightSong:"更多新碟"
-                // }else{
-                //     RightSong:"新歌推荐"
-                // }
+                 this.active=e.target.dataset.id;
+                 
+                if(this.active=="disc"){
+                    this.RightSong="更多新碟"
+                }else{
+                    this.RightSong="新歌推荐"
+                }
             }
         },
         // 注册
         components:{
-            "song":song
+            "song":Song,
+            "DiscPanel":DiscPanel,
+            "NewSongPanel":NewSongPanel
         }
     }
 </script>
@@ -49,5 +54,9 @@ import song from "./song"
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    
+    .NewProduct-app{
+        padding: 10px 20px;
     }
 </style>

@@ -8,34 +8,34 @@
         </div>
         <div class="recommended-content">
             <div class="item">
-                <span>△563万</span>
-                <img src='../../public/chudon.jpg' alt="图像已损坏">
-                <h6>那些触动人心的女生名谣</h6>
+                <Amount item="350万"></Amount>
+                <img src='../../../assets/imgs/Recommended/chudon.jpg' alt="图像已损坏">
+                <span>那些触动人心的女生名谣</span>
             </div>
             <div class="item">
-                <Amount></Amount>
-                <img src='../../public/laoge.jpg' alt="图像已损坏">
-                <h6>老歌越听越经典，旧人越看越无情</h6>
+                <Amount item="350万"></Amount>
+                <img src='../../../assets/imgs/Recommended/laoge.jpg' alt="图像已损坏">
+                <span>老歌越听越经典，旧人越看越无情</span>
             </div>
             <div class="item">
-                <Amount></Amount>
-                <img src='../../public/dianyin.jpg' alt="图像已损坏">
-                <h6>[东方电音动] 璇跳律，参透神经</h6>
+                <Amount item="350万"></Amount>
+                <img src='../../../assets/imgs/Recommended/dianyin.jpg' alt="图像已损坏">
+                <span>[东方电音动] 璇跳律，参透神经</span>
             </div>
             <div class="item">
-                <span>△563万</span>
-                <img src='../../public/ruanmeizi.jpg' alt="图像已损坏">
-                <h6>软妹子 萝莉 暖音 软耳朵</h6>
+                <Amount item="350万"></Amount>
+                <img src='../../../assets/imgs/Recommended/ruanmeizi.jpg' alt="图像已损坏">
+                <span>软妹子 萝莉 暖音 软耳朵</span>
             </div>
             <div class="item">
-                <Amount></Amount>
-                <img src='../../public/baidadj.jpg' alt="图像已损坏">
-                <h6>[全球百大DJ] 2018百大DJ精选作品</h6>
+                <Amount item="350万"></Amount>
+                <img src='../../../assets/imgs/Recommended/baidadj.jpg' alt="图像已损坏">
+                <span>[全球百大DJ] 2018百大DJ精选作品</span>
             </div>
             <div class="item">
-                <Amount></Amount>
-                <img src='../../public/qiubai.jpg' alt="图像已损坏">
-                <h6>[燃系ACG],吾驰骋于沙场，未曾经历一败</h6>
+                <Amount item="350万"></Amount>
+                <img src='../../../assets/imgs/Recommended/qiubai.jpg' alt="图像已损坏">
+                <span>[燃系ACG],吾驰骋于沙场，未曾经历一败</span>
             </div>
         </div>
         
@@ -56,7 +56,7 @@ import Amount  from "./Amount";
          }
     }
 </script>
-<style>
+<style scoped>
     .recommended-app{
         padding: 10px 20px;
     }
@@ -94,9 +94,10 @@ import Amount  from "./Amount";
         width: 100%;
         border-radius: 5px;
     }
-    .item>h6{
+    .item>span{
         margin: 5px 0;
         color: #000;
+        font-size: 5px;
     }
     
 </style>

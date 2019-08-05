@@ -1,11 +1,11 @@
 <template>
-<!-- 这是你杰明爸爸的组件，你们这些渣渣，尤其是张兰同学 -->
 <!-- 标题 -->
     <div class="recommended-app">
         <div class="recommended-title">
             <h4>推荐歌曲</h4>
             <span>歌曲广场</span>
         </div>
+        <!-- 推荐歌曲列表 -->
         <div class="recommended-content">
             <div class="item">
                 <Amount item="350万"></Amount>

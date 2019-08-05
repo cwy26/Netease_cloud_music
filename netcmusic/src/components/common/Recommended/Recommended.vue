@@ -9,32 +9,32 @@
         <div class="recommended-content">
             <div class="item">
                 <Amount item="350万"></Amount>
-                <img src='../../../assets/imgs/Recommended/chudon.jpg' alt="图像已损坏">
+                <img :src="require('../../../assets/imgs/Recommended/chudon.jpg')" alt="图像已损坏">
                 <span>那些触动人心的女生名谣</span>
             </div>
             <div class="item">
                 <Amount item="350万"></Amount>
-                <img src='../../../assets/imgs/Recommended/laoge.jpg' alt="图像已损坏">
+                <img :src="require('../../../assets/imgs/Recommended/laoge.jpg')" alt="图像已损坏">
                 <span>老歌越听越经典，旧人越看越无情</span>
             </div>
             <div class="item">
                 <Amount item="350万"></Amount>
-                <img src='../../../assets/imgs/Recommended/dianyin.jpg' alt="图像已损坏">
+                <img :src="require('../../../assets/imgs/Recommended/dianyin.jpg')" alt="图像已损坏">
                 <span>[东方电音动] 璇跳律，参透神经</span>
             </div>
             <div class="item">
                 <Amount item="350万"></Amount>
-                <img src='../../../assets/imgs/Recommended/ruanmeizi.jpg' alt="图像已损坏">
+                <img :src="require('../../../assets/imgs/Recommended/ruanmeizi.jpg')" alt="图像已损坏">
                 <span>软妹子 萝莉 暖音 软耳朵</span>
             </div>
             <div class="item">
                 <Amount item="350万"></Amount>
-                <img src='../../../assets/imgs/Recommended/baidadj.jpg' alt="图像已损坏">
+                <img :src="require('../../../assets/imgs/Recommended/baidadj.jpg')" alt="图像已损坏">
                 <span>[全球百大DJ] 2018百大DJ精选作品</span>
             </div>
             <div class="item">
                 <Amount item="350万"></Amount>
-                <img src='../../../assets/imgs/Recommended/qiubai.jpg' alt="图像已损坏">
+                <img :src="require('../../../assets/imgs/Recommended/qiubai.jpg')" alt="图像已损坏">
                 <span>[燃系ACG],吾驰骋于沙场，未曾经历一败</span>
             </div>
         </div>
@@ -42,7 +42,7 @@
     </div>
 </template>
 <script>
-// 引入消息
+// 引入子组件
 import Amount  from "./Amount";
     export default {
         data(){
@@ -73,6 +73,7 @@ import Amount  from "./Amount";
         border:1px solid #eee;
         border-radius:15px;
         padding: 5px  10px;
+        font-size: 10px;
     }
     .recommended-content{
         display: flex;
@@ -89,6 +90,7 @@ import Amount  from "./Amount";
         flex-direction: column;
         position: relative;
          min-height: 130px;
+         
     }
     .item>img{
         width: 100%;
@@ -98,6 +100,10 @@ import Amount  from "./Amount";
         margin: 5px 0;
         color: #000;
         font-size: 5px;
-    }
-    
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }  
 </style>

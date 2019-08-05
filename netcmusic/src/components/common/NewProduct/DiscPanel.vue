@@ -1,15 +1,15 @@
 <template>
     <div class="DiscPanel-content">
             <div class="item">
-                <img src="../../../assets/imgs/NewProduct/huanyibo.jpg" alt="图片已损坏">
+                <img :src="require('../../../assets/imgs/NewProduct/huanyibo.jpg')" alt="图片已损坏">
                 <span>王一博热门单曲</span>
             </div>
             <div class="item">
-                <img src="../../../assets/imgs/NewProduct/care.jpg" alt="图片已损坏">
+                <img :src="require('../../../assets/imgs/NewProduct/care.jpg')" alt="图片已损坏">
                 <span>Care package Drake</span>
             </div>
             <div class="item">
-                <img src="../../../assets/imgs/NewProduct/resue.jpg" alt="图片已损坏">
+                <img :src="require('../../../assets/imgs/NewProduct/resue.jpg')" alt="图片已损坏">
                 <span>Rescue Me (BYNT.Remix)</span>
             </div>
     </div>
@@ -44,6 +44,11 @@
         margin: 5px 0;
         color: #000;
         font-size: 5px;
+         overflow: hidden;
+        -webkit-line-clamp: 2;
+        text-overflow: ellipsis;
+        display:-webkit-box;
+        -webkit-box-orient: vertical;
     }
 </style>
 

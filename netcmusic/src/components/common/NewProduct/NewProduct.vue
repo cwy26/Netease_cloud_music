@@ -20,7 +20,7 @@
 </template>
 <script>
 // 引入子组件
-import Song from "./Song"
+import Song from "./xds-song.vue"
 import DiscPanel from "./DiscPanel"
 import NewSongPanel from "./NewSongPanel"
     export default {

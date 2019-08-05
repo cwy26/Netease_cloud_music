@@ -3,7 +3,19 @@
     <div class="page-wrap">
       <mt-tab-container v-model="active">
         <mt-tab-container-item id="发现">
-          <titlebar></titlebar>  
+          <titlebar-find></titlebar-find>  
+        </mt-tab-container-item>
+        <mt-tab-container-item id="视频">
+          <titlebar-video></titlebar-video>  
+        </mt-tab-container-item>
+        <mt-tab-container-item id="我的">
+          <titlebar-me></titlebar-me>  
+        </mt-tab-container-item>
+        <mt-tab-container-item id="云村">
+          <titlebar-village></titlebar-village>  
+        </mt-tab-container-item>
+        <mt-tab-container-item id="账号">
+          <titlebar-account></titlebar-account>  
         </mt-tab-container-item>
       </mt-tab-container>
       <mt-tabbar v-model="active" fixed>
@@ -48,7 +60,11 @@
 </template>
 <script>
 import TabBarIcon from "../components/common/TabBarIcon.vue";
-import TitleBar from "../components/common/TitleBar.vue";
+import TitleBarFind from "../components/common/TitleBar_find.vue";
+import TitleBarVideo from "../components/common/TitleBar_video.vue";
+import TitleBarMe from "../components/common/TitleBar_me.vue";
+import TitleBarAccount from "../components/common/TitleBar_account.vue";
+import TitleBarVillage from "../components/common/TitleBar_village.vue";
 export default {
   data() {
     return {
@@ -75,7 +91,11 @@ export default {
   },
   components: {
     tabbaricon: TabBarIcon,
-    titlebar: TitleBar
+    'titlebar-find': TitleBarFind,
+    'titlebar-video': TitleBarVideo,
+    'titlebar-me': TitleBarMe,
+    'titlebar-village': TitleBarVillage,
+    'titlebar-account': TitleBarAccount
   }
 };
 </script>

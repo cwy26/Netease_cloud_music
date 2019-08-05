@@ -28,7 +28,7 @@ import NewSongPanel from "./NewSongPanel"
             return{
                 active:"disc",
                 RightSong:"更多新碟",
-                discClass:{vali_success:false},
+                discClass:{vali_success:true},
                 playlistClass:{vali_success:false}
             }
         },

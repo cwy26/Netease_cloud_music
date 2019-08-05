@@ -1,15 +1,18 @@
 <template>
     <div class="page-head">
-        <span class="find-listen"></span>
-        <div>
-            
-        </div>
-        <span></span>
+        <span class="focus"></span>
+        <xds-public></xds-public>
+        <xds-player></xds-player>
     </div>
 </template>
 <script>
+import Player from './Player.vue';
+import XdsPublic from './xds_public.vue';
 export default {
-    
+    components: {
+        'xds-player': Player,
+        'xds-public': XdsPublic
+    }
 }
 </script>
 <style scoped>
@@ -26,12 +29,10 @@ export default {
         color: #666;
         font-size: 18px;
     }
-    .page-head span {
+    .focus {
         width: 50px;
         height: 50px;
-    }
-    .find-listen {
-        background: url('../../assets/icon/normal_32px/listen.png') center center no-repeat;
+        background: url('../../assets/icon/normal_32px/focus.png') center center no-repeat;
     }
 </style>
 
